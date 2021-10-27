@@ -1,3 +1,5 @@
+#Script image_face_detection.py is used for face detection on an image. It uses image 'chelsea.jpeg' which can be found indata folder.
+
 from matplotlib import pyplot
 from matplotlib.patches import Rectangle
 from mtcnn.mtcnn import MTCNN
