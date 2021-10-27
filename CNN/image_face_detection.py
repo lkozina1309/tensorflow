@@ -13,7 +13,7 @@ def draw_image_with_boxes(filename, result_list):
 		ax.add_patch(rect)
 	pyplot.show()
  
-image = '/home/marija/tensorflow/CNN/my/chelsea.jpeg'
+image = 'chelsea.jpeg'
 read = pyplot.imread(image)
 detector = MTCNN()
 faces = detector.detect_faces(read)
