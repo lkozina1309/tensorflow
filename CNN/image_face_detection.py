@@ -4,7 +4,7 @@ from matplotlib import pyplot
 from matplotlib.patches import Rectangle
 from mtcnn.mtcnn import MTCNN
  
-def draw_image_with_boxes(filename, result_list):
+def rectangle(filename, result_list):
 	data = pyplot.imread(filename)
 	pyplot.imshow(data)
 	ax = pyplot.gca()
@@ -19,4 +19,4 @@ image = 'chelsea.jpeg'
 read = pyplot.imread(image)
 detector = MTCNN()
 faces = detector.detect_faces(read)
-draw_image_with_boxes(image, faces)
+rectangle(image, faces)
