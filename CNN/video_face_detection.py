@@ -2,7 +2,7 @@ import cv2
 from mtcnn.mtcnn import MTCNN
 
 detector = MTCNN()
-cap = cv2.VideoCapture('/home/marija/OpenCV/data/Megamind.avi')
+cap = cv2.VideoCapture('Megamind.avi')
 
 while cap.isOpened():
 	_, img = cap.read()
