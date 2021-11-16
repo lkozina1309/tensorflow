@@ -3,7 +3,6 @@ import os
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers, datasets, models
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 img_height = 180
 img_width = 180
