@@ -9,7 +9,7 @@ img_width = 224
 batch_size = 16
 
 ds_train = tf.keras.utils.image_dataset_from_directory(
-	'/home/marija/tensorflow/CNN/data/faces', #path
+	'data/faces', #path
 	batch_size=batch_size,
 	image_size = (img_height, img_width), 
 	shuffle=True,
@@ -19,7 +19,7 @@ ds_train = tf.keras.utils.image_dataset_from_directory(
 )
 
 ds_validation = tf.keras.utils.image_dataset_from_directory(
-	'/home/marija/tensorflow/CNN/data/faces', #path
+	'data/faces', #path
 	batch_size=batch_size,
 	image_size = (img_height, img_width), 
 	shuffle=True,
