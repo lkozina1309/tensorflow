@@ -3,6 +3,8 @@ import os
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers, datasets, models
+from keras.preprocessing import image
+from keras.preprocessing.image import ImageDataGenerator
 
 
 img_height = 180
@@ -39,11 +41,14 @@ ds_validation = ds_validation.cache().prefetch(buffer_size=AUTOTUNE)
 
 normalization_layer = layers.Rescaling(1./255)
 
-data_augmentation = tf.keras.Sequential([
-	layers.RandomFlip("horizontal", input_shape = (img_height, img_width,3)),
-	tf.keras.layers.RandomRotation(0.1),
-	tf.keras.layers.RandomZoom(0.1),
-])	
+datagen = ImageDataGenerator(
+	rotation_range=40,
+	width_shift_range=0.2,
+	height_shift_range=0.2,
+	shear_range=0.2,
+	zoom_range=0.2,
+	horizontal_flip=True,
+	fill_mode='nearest')	
 
 num_classes = 5
 
