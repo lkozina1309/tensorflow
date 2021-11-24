@@ -1,22 +1,17 @@
 #Script image_face_detection.py is used for face detection on an image. It uses image 'chelsea.jpeg' which can be found indata folder.
 
-from matplotlib import pyplot
-from matplotlib.patches import Rectangle
+import cv2
 from mtcnn.mtcnn import MTCNN
  
-def rectangle(filename, result_list):
-	data = pyplot.imread(filename)
-	pyplot.imshow(data)
-	ax = pyplot.gca()
-
-	for result in result_list:
-		x, y, width, height = result['box']
-		rect = Rectangle((x, y), width, height, fill=False, color='green')
-		ax.add_patch(rect)
-	pyplot.show()
- 
-image = 'chelsea.jpeg'
-read = pyplot.imread(image)
 detector = MTCNN()
-faces = detector.detect_faces(read)
-rectangle(image, faces)
+img = cv2.imread('chelsea.jpeg')
+img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+faces = detector.detect_faces(img)
+
+for (x, y , w ,h) in faces:
+	cv2.rectangle(img, (x,y), (x+w, y+h), (255, 0 , 0), 3)
+	
+cv2.imshow('img', img)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
