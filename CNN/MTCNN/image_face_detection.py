@@ -1,4 +1,4 @@
-#Script image_face_detection.py is used for face detection on an image. It uses image 'chelsea.jpeg' which can be found indata folder.
+#Script image_face_detection.py is used for face detection on an image. It uses image 'chelsea.jpeg' which can be found in data folder.
 
 import cv2
 from mtcnn.mtcnn import MTCNN
