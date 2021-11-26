@@ -4,7 +4,7 @@ import cv2
 from mtcnn.mtcnn import MTCNN
  
 
-img = cv2.imread("C:/Users/38595/Desktop/OpenCV/data/chelsea.jpeg")
+img = cv2.imread("chelsea.jpeg")
 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 detector = MTCNN()
 faces = detector.detect_faces(img)
