@@ -22,7 +22,7 @@ https://lukakozina6.wixsite.com/cvlab
 
 Repository has 2 parts, CNN and RL. Convolutional neural networks (CNN) contains scripts used for computer vision and Reinforcement Learning (RL) uses gym ( https://gym.openai.com/) in order to maximize the notion of cumulative reward.
 
-Repository CNN has scripts used for classification of images.
+Repository CNN has scripts used for classification of images. These scripts can be used in more serious projects.
 
 
 
